@@ -1,0 +1,52 @@
+\chapter{Introduction}
+\section{What}
+
+MEAN-DG ({\bf M}ixed {\bf E}lements {\bf A}pplications with {\bf N}odal {\bf D}iscontinuous {\bf G}alerkin method) 
+aims to be a versatile, industry-applications oriented efficient Discontinuous Galerkin code. 
+However, all efforts have been taken to  keep it as a flexible framework such that in addition to the Galerkin family
+of schemes, other schemes such as the FV scheme, spectral methods etc. can be written as required. 
+The code in its finished form is expected to cater four types of 3D elements: hexahedral, tetrahedral, prism and pyramid cells.
+It can be customized for a wide array of equations ranging from as simple as the linear advection equation, Laplace equation
+to as complicated as the Navier Stokes (N-S) equations and Magnetohydrodynamics (MHD) equations. 
+The code is mostly a c++ code with some utilities written in Python language. 
+The data-structure and the file reading format is inspired from the OpenFOAM file format. Thus, test-cases
+and applications for OpenFOAM can be readily solved using MEAN-DG (depending on the solvers coded).
+After the current phase the code will have following features:
+\begin{itemize}
+	\item  Solve advection dominated flows efficiently
+	\item  Achieve arbitrary higher-order accuracy in space
+	\item  Open-MP parallelization 
+	\item  Capability to handle flexible geometries and different mesh element types
+	\item  Capability to code other systems of equations
+\end{itemize}
+
+\section{Why}
+Higher-order accuracy in space is extremely important for many applications such as boundary layer flows, vortex dominated
+flows, linear propagating waves (such as in electromagnetics and aeroacoustics) etc. Finite volume (FV) methods are well established
+and mature enough to cater to the industry demands. However, FV methods suffer from certain limitations, such as:
+\begin{itemize}
+\item Poor hardware scalability and parallelization capacity (because of wider stencils used and the inter-cell communications it demands) 
+\item Limitations on order of accuracy because of non-compact nature of the reconstruction
+\item Difficult boundary treatments
+\end{itemize}
+On the other hand the spectral methods and gloabal collocation methods are extremely accurate but lack flexibility and 
+simplicity of the finite volume methods. The DG methods fall right in the sweet spot between the element based galerkin methods
+and the finite volume methods. As of now, not many large-scale codes are available based on the DG framework. A few codes are 
+available such as,
+\begin{enumerate}
+\item Deal.II (http://www.dealii.org/) 
+\item Dune (https://www.dune-project.org/about/dune/) 
+\item Fenix (https://fenicsproject.org/documentation/) 
+\end{enumerate}
+The idea behind MEAN-DG is to have a DG code similar to the OpenFOAM FV code for industry level applications. 
+It also serves the purpose of capacity building, indegeneous technology building and have an in-house computation-platform.
+
+\section{Who}
+The PI of the project is Prof. S. Gopalakrishnan. Primary contributions to the project are made by Tapan Mankodi and Subodh Joshi.
+The project is funded by Siemens Technologies, Bangalore. 
+
+\section{How {\small {to refer this manual}}}
+Chapter \ref{math} covers the necessary mathematical background to get started with the code. Chapter \ref{structure} explains
+the structure of the code. Chapter \ref{application} explains the work-flow for a few applications solved with MEAN-DG. 
+Chapter \ref{license} consists of the license. User is strongly reccommended to go through it before using the code.
+

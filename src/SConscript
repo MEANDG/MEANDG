@@ -1,0 +1,37 @@
+# This Sconscript details the build instructions to the compiler
+
+env = Environment(CCFLAGS=' -I include -g -O3 -fopenmp -DEIGEN_MPL2_ONLY ') # All the flags go here. -I include tells where header files are located 
+env.Append(LINKFLAGS = ['-fopenmp'])
+# list of all the source files
+# add the new files here (only cpp)
+sources = Split("""
+		main.cpp
+		Tests.cpp
+		Point.cpp
+		displayFunctions.cpp
+		Tensor.cpp
+		mathFunctions.cpp
+		otherFunctions.cpp
+
+		Face.cpp
+		Cell.cpp
+		BoundaryConditions.cpp
+
+		GeometryIO.cpp
+
+		FunctionalSpaces.cpp
+		RefCell.cpp
+		RefFace.cpp
+
+		Gasdynamics.cpp
+		InternalFluxSolver.cpp
+		RiemannSolver.cpp
+		DG.cpp
+	
+		""")
+
+object_list = env.Object(source = sources)
+
+env.Program(target = '../out.exe' , source = object_list) # creates output file inside the project folder instead of the src folder
+
+
