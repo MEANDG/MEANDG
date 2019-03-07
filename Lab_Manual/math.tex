@@ -210,6 +210,24 @@ where, $\Omega^s$ is a reference element and $\mathbf{J}$ is the Jacobian matrix
 The main benefit of performing the above conversion is that, the function $\phi(r,s,t)$ needs to be computed only once
 for the standard element, each cell will have its own Jacobian matrix, so number of computations reduce drastically.
 
+In the current code, the vertices and faces are numbered in a standardized fashion as shown in Fig.\ref{RC}.
+
+\begin{figure}[h]
+	\begin{minipage}[t]{0.5 \textwidth}
+		\begin{center}{\includegraphics[width=0.9\textwidth]{RefCellFace.pdf}}
+		\end{center}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5 \textwidth}
+		\begin{center}{\includegraphics[width=0.9\textwidth]{RefCellVertex.pdf}}
+		\end{center}
+	\end{minipage}%
+	\caption{\label{RC}a. Reference cell and faces relative numbering \hspace{2mm} b. Reference cell and vertices numbering}
+\end{figure}
+
+The corresponding implementation can be found in: 
+\begin{verbatim} 
+Cell::orderDefiningPoints() 
+\end{verbatim}
 
 \section{Mapping onto the Reference Face}
 DG method involves evaluation of surface integrations in order to find the numerical flux at the cell-interface.
@@ -412,6 +430,17 @@ Then if
 	Face::mapOwnerQuadPoints = [3, 2, 21, 14, ... , 7]
 \end{verbatim}
 Then, it means the $0^{th}$ quad point on face is same as the $3^{rd}$ quad point of owner cell and so on. 
+
+
+\begin{note}
+	In the improved version of the code, the face-vertex numbering is standardized, such that the vertex numbering follows the right-hand rule.
+	i.e. if the curled fingers indicate the sequence of vertices, then the stretched thumb points in the direction of hte face-normal.
+	In that case, the rotation matrices are not required. i.e. both method 1 and method 2 are obsolete. 
+	Refer:
+	\begin{verbatim}
+	Face::orderDefiningPoints()
+	\end{verbatim}
+\end{note}
 
 
 \section{Modal and Nodal Basis Functions}

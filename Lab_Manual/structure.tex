@@ -1,1 +1,35 @@
 \chapter{Code Structure}\label{structure}
+
+MEANDG has a central datastructure called as `Tensor', which forms all the important arrays, matrices, multidimensional storage lists etc.
+Refer `include/Tensor' for details. Tensor class is made of 4 sub-classes. 
+\begin{verbatim}
+TensorO1<dType>, TensorO2<dType>, TensorO3<dType>, Matrix<dType>
+\end{verbatim}
+From these, $O(1), O(2), O(3)$ tensors can be created of arbitrary dimensions. The tensor objects interact with one another and 
+have several in-build methods such as $L_1, L_2, L_\infty$ norms etc. All the maths functions accept objects of Tensor library. 
+
+Following example code shows usage of tensor class:
+\begin{verbatim}
+TensorO1<double> A(5);		// creates a O(1) tensor of size 5 with 
+				// data-members of the type double
+TensorO1<double> C(5);
+
+for (int i=0; i<5; i++){
+	// generate a random number between 0 and 100
+	double valueA = getRandom(0.0,100.0);	
+	// generate another random number between 0 and 100
+	double valueC = getRandom(0.0,100.0);	
+
+	// set value at ith index
+	A.setValue(i, valueA);			
+	C.setValue(i, valueC);
+};
+// now A and C have random values 
+
+double dotAnswer = Math::dot(A,C);		// perform math product between two arrays
+cout << dotAnswer << endl;			// print the answer
+
+
+\end{verbatim}
+
+For further details and the available functions, refer the code documentation.

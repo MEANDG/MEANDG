@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.25)  5 OCT 2018 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.25)  7 MAR 2019 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,43 +461,63 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Warning: Command \normalsize invalid in math mode on input line 147.
 
 
-[6] [7]
+[6] [7] <RefCellFace.pdf, id=61, 424.58624pt x 373.395pt>
+File: RefCellFace.pdf Graphic file (type pdf)
 
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 236.
+<use RefCellFace.pdf>
+Package pdftex.def Info: RefCellFace.pdf used on input line 217.
+(pdftex.def)             Requested size: 204.85846pt x 180.16196pt.
+ <RefCellVertex.pdf, id=62, 455.7025pt x 430.60875pt>
+File: RefCellVertex.pdf Graphic file (type pdf)
+
+<use RefCellVertex.pdf>
+Package pdftex.def Info: RefCellVertex.pdf used on input line 221.
+(pdftex.def)             Requested size: 204.85846pt x 193.58159pt.
+ [8 <./RefCellFace.pdf> <./RefCellVertex.pdf
+
+pdfTeX warning: pdflatex (file ./RefCellVertex.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 254.
 
 
-[8]
 
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 275.
-
-
-
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 314.
-
-
-
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 325.
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 293.
 
 
 [9]
 
-LaTeX Font Warning: Command \normalsize invalid in math mode on input line 352.
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 332.
 
 
-[10] <Legendre.pdf, id=72, 462.72874pt x 346.29375pt>
+
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 343.
+
+
+
+LaTeX Font Warning: Command \normalsize invalid in math mode on input line 370.
+
+
+[10] [11] <Legendre.pdf, id=133, 462.72874pt x 346.29375pt>
 File: Legendre.pdf Graphic file (type pdf)
  <use Legendre.pdf>
-Package pdftex.def Info: Legendre.pdf used on input line 444.
+Package pdftex.def Info: Legendre.pdf used on input line 473.
 (pdftex.def)             Requested size: 364.19667pt x 272.5598pt.
 
-[11] <Chebyshev.pdf, id=76, 462.72874pt x 346.29375pt>
+<Chebyshev.pdf, id=134, 462.72874pt x 346.29375pt>
 File: Chebyshev.pdf Graphic file (type pdf)
  <use Chebyshev.pdf>
-Package pdftex.def Info: Chebyshev.pdf used on input line 452.
+Package pdftex.def Info: Chebyshev.pdf used on input line 481.
 (pdftex.def)             Requested size: 364.19667pt x 272.5598pt.
-
-[12 <./Legendre.pdf> <./Chebyshev.pdf>] [13]) (./structure.tex [14]
+ [12 <./Legendre.pdf>] [13 <./Chebyshev.pdf>]) (./structure.tex [14]
 Chapter 3.
+
+Overfull \hbox (20.1148pt too wide) in paragraph at lines 33--33
+[]\T1/cmtt/m/n/12 double dotAnswer = Math::dot(A,C); // perform math product be
+tween two arrays[] 
+ []
+
 ) (./applications.tex [15
 
 ]
@@ -514,13 +534,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4902 strings out of 493029
- 70102 string characters out of 6136234
- 141781 words of memory out of 5000000
- 8298 multiletter control sequences out of 15000+600000
+ 4913 strings out of 493029
+ 70304 string characters out of 6136234
+ 141795 words of memory out of 5000000
+ 8307 multiletter control sequences out of 15000+600000
  20250 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,9n,45p,800b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,9n,45p,800b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
@@ -543,10 +563,10 @@ f/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.p
 fb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf
 /fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Lab_Manual.pdf (20 pages, 577362 bytes).
+Output written on Lab_Manual.pdf (20 pages, 605865 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 306 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
