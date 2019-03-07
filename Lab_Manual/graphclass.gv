@@ -1,0 +1,24 @@
+digraph G {
+	size = "4,4";
+Point -> Cell;
+Point -> Face;
+Cell -> Face;
+Face -> Cell;
+Face -> DG;
+Cell -> DG;
+"Functional Space" -> DG;
+"Math Functions" -> DG;
+
+"OF Input" -> GeometryIO;
+GeometryIO -> Point;
+GeometryIO -> Cell;
+GeometryIO -> Face;
+Tensor -> Point;
+Tensor -> Cell;
+Tensor -> Face;
+Tensor -> "Functional Space";
+Tensor -> "Math Functions";
+Tensor -> "DG";
+
+ }
+
