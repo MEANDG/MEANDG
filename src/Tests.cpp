@@ -480,7 +480,7 @@ namespace Test{
 
 	void TestEulerEquations1(){
 		string path;
-		path = "other/squareBend";
+		path = "app/linAdvEuler";
 		DG application(path);
 
 		// Define Functional Details regarding order and roots of the functions
@@ -499,7 +499,7 @@ namespace Test{
 		
 		// Define temporal and integrator details
 		//double deltaT = 1e-2,startTime=0,endTime=12,printTime=0.2;int integratorType=3;
-		double deltaT = 1e-7,startTime=0.0,endTime=10000*deltaT,printTime=100*deltaT;int integratorType=3;
+		double deltaT = 5e-5,startTime=0.0,endTime=100*deltaT,printTime=10*deltaT;int integratorType=3;
 		application.setTemporalDetails(deltaT,startTime,endTime,printTime,integratorType);
 		application.printTemporalDetails();
 

@@ -8,8 +8,8 @@ int main(){
 
 	srand(int(time(0)));
 
-	runAllTests();
-	//Test::TestEulerEquations1();
+	//runAllTests();
+	Test::TestEulerEquations1();
 
 	return 0;
 }
